@@ -27,7 +27,7 @@
     }
 
     .dark {
-        --background: 240 10% 3.9%;
+        --background: 0 0% 3.9%;
         --foreground: 0 0% 98%;
         --card: 224 71.4% 4.1%;
         --card-foreground: 210 20% 98%;
@@ -52,7 +52,7 @@
 
 @layer base {
     * {
-        @apply border-border m-0 p-0 box-border;
+        @apply border-border m-0 p-0 box-border scroll-smooth;
     }
     body {
         @apply bg-background text-foreground;
@@ -87,4 +87,18 @@
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {
     font-weight: 300;
+}
+
+#cursor {
+    color: #ffffff;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
 }
