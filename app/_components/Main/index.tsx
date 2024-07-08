@@ -15,9 +15,10 @@ const Main = () => {
                 camera={{
                     position: [10, -7.5, -5],
                 }}
-                className="bg-zinc-900"
+                className="bg-background"
             >
                 <directionalLight />
+                {/* <OrbitControls maxDistance={20} minDistance={10} /> */}
                 <pointLight position={[-30, 0, -30]} power={10.0} />
                 <PointCircle />
             </Canvas>
