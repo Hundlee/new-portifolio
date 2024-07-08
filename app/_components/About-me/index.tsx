@@ -12,14 +12,14 @@ const AboutMe = () => {
             id="sobre-mim"
         >
             <div className="flex w-full items-center">
-                <h2 className="text-5xl font-bold mr-10 text-nowrap leading-loose">
+                <h2 className="text-5xl font-bold mr-10 text-nowrap leading-loose animate-slideintop1s">
                     Sobre mim<span className="text-primary text-6xl">.</span>
                 </h2>
-                <Separator className="bg-white opacity-50 hidden lg:block" />
+                <Separator className="bg-white opacity-50 hidden lg:block animate-slideinright1s" />
             </div>
 
             <div className="flex flex-col lg:flex-row mt-5 gap-10">
-                <div className="font-thin text-xl flex flex-col gap-3">
+                <div className="font-thin text-xl flex flex-col gap-3 animate-slideinleft1s">
                     <p>
                         Minha experiência abrange desde a criação de interfaces
                         de usuário intuitivas e responsivas até a implementação
