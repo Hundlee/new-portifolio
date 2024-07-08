@@ -32,14 +32,20 @@ const Header = () => {
                 href="https://docs.google.com/document/d/e/2PACX-1vQ__pn4QIvPQ3niaqKS7bJRChkJbsoaGHQAQDQQHvJwAVNG3B04mYNm30_J4K1NkV3AJtngcM50SBjj/pub"
                 target="_blank"
             >
-                <button className="border p-3 border-primary text-primary font-semibold rounded-md hover:backdrop-blur-lg">
+                <button className="border p-3 border-primary text-primary font-semibold rounded-md hover:backdrop-blur-lg animate-slideinleft1s">
                     Currículo
                 </button>
             </a>
             <div className="flex gap-5">
-                <GitHubIcon url="https://github.com/Hundlee" />
-                <LinkedinIcon url="https://www.linkedin.com/in/gabriel-mesquita-9614782b4/" />
-                <WhatsAppIcon url="https://github.com/Hundlee" />
+                <div className="animate-slideicontop1">
+                    <GitHubIcon url="https://github.com/Hundlee" />
+                </div>
+                <div className="animate-slideicontop2">
+                    <LinkedinIcon url="https://www.linkedin.com/in/gabriel-mesquita-9614782b4/" />
+                </div>
+                <div className="animate-slideicontop3">
+                    <WhatsAppIcon url="https://github.com/Hundlee" />
+                </div>
             </div>
         </div>
     );
