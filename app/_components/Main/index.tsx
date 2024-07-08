@@ -10,7 +10,7 @@ import DynamicText from "./components/dynamic-Text";
 
 const Main = () => {
     return (
-        <div className="relative h-screen overflow-y-auto">
+        <div className="relative h-screen overflow-hidden">
             <Canvas
                 camera={{
                     position: [10, -7.5, -5],
@@ -24,7 +24,7 @@ const Main = () => {
             </Canvas>
 
             <div className="absolute top-[50%] left-[40%] -translate-x-[50%] -translate-y-[50%]">
-                <div className="animate-slideintop gap-3 flex flex-col">
+                <div className="animate-slideintop1s gap-3 flex flex-col">
                     <h1 className="text-white font-bold text-6xl pointer-events-none select-none">
                         Olá, Meu nome é Gabriel Mesquita
                         <span className="text-primary text-7xl">.</span>
