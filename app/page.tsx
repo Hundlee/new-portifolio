@@ -7,7 +7,7 @@ import Header from "./_components/Header";
 
 export default function Home() {
     return (
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative overflow-hidden">
             <Header />
             <NavBar />
             <Main />
