@@ -1,9 +1,13 @@
-import Image from "next/image";
+"use client";
+
+import Main from "./_components/Main";
+import Skills from "./_components/Skills";
 
 export default function Home() {
     return (
-        <div>
-            <h1>oi</h1>
+        <div className="flex flex-col">
+            <Main />
+            <Skills />
         </div>
     );
 }
