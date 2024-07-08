@@ -68,15 +68,45 @@ const config = {
                     from: { height: "var(--radix-accordion-content-height)" },
                     to: { height: "0" },
                 },
-                slideintop: {
+                slideintop1s: {
                     from: { opacity: "0", transform: "translateY(-200px)" },
+                    to: { opacity: "1", transform: "translateY(0)" },
+                },
+                slideinbottom1s: {
+                    from: { opacity: "0", transform: "translateY(200px)" },
+                    to: { opacity: "1", transform: "translateY(0)" },
+                },
+                slideinleft1s: {
+                    from: { opacity: "0", transform: "translateX(-200px)" },
+                    to: { opacity: "1", transform: "translateX(0)" },
+                },
+                slideinright1s: {
+                    from: { opacity: "0", transform: "translateX(200px)" },
+                    to: { opacity: "1", transform: "translateX(0)" },
+                },
+                slidenavbarright: {
+                    from: { opacity: "0", transform: "translateX(100px)" },
+                    to: { opacity: "1", transform: "translateX(0)" },
+                },
+                slideicontop: {
+                    from: { opacity: "0", transform: "translateY(-100px)" },
                     to: { opacity: "1", transform: "translateY(0)" },
                 },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
-                slideintop: "slideintop 1s ease 300ms",
+                slideintop1s: "slideintop1s 1s ease 300ms",
+                slideinleft1s: "slideinleft1s 1s ease 300ms",
+                slideinright1s: "slideinright1s 1s ease 300ms",
+                slideinbottom1s: "slideinbottom1s 1s ease 300ms",
+                slidenavbarright1: "slidenavbarright .3s ease 300ms",
+                slidenavbarright2: "slidenavbarright .7s ease 300ms",
+                slidenavbarright3: "slidenavbarright 1s ease 300ms",
+                slidenavbarright4: "slidenavbarright 1.3s ease 300ms",
+                slideicontop1: "slideicontop .5s ease 300ms",
+                slideicontop2: "slideicontop 1s ease 300ms",
+                slideicontop3: "slideicontop 1.5s ease 300ms",
             },
         },
     },
