@@ -4,6 +4,7 @@ import Main from "./_components/Main";
 import NavBar from "./_components/NavBar";
 import AboutMe from "./_components/About-me";
 import Header from "./_components/Header";
+import Projects from "./_components/Projects";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <NavBar />
             <Main />
             <AboutMe />
+            <Projects />
         </div>
     );
 }
