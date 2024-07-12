@@ -5,6 +5,8 @@ import { Separator } from "../ui/separator";
 import BackendSkills from "./components/backend-skills";
 import FrontEndSkills from "./components/frontend-skins";
 import { SlideReveal } from "@/app/animation/slide-reveal";
+import { FaArrowRight } from "react-icons/fa";
+import { GitHubIcon, LinkedinIcon, WhatsAppIcon } from "../Social-Icons";
 
 const AboutMe = () => {
     return (
@@ -63,6 +65,24 @@ const AboutMe = () => {
                             vidas e sou dedicado a contribuir com soluções que
                             fazem a diferença.
                         </p>
+                    </SlideReveal>
+                    <SlideReveal>
+                        <div className="flex items-center gap-4">
+                            <h2 className="text-primary font-semibold flex items-center gap-2">
+                                Meus Links <FaArrowRight />
+                            </h2>
+                            <div className="flex gap-5">
+                                <div>
+                                    <GitHubIcon url="https://github.com/Hundlee" />
+                                </div>
+                                <div>
+                                    <LinkedinIcon url="https://www.linkedin.com/in/gabriel-mesquita-9614782b4/" />
+                                </div>
+                                <div>
+                                    <WhatsAppIcon url="https://github.com/Hundlee" />
+                                </div>
+                            </div>
+                        </div>
                     </SlideReveal>
                 </div>
                 <div className="flex flex-col w-full gap-5">
