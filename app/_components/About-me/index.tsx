@@ -9,15 +9,17 @@ import { SlideReveal } from "@/app/animation/slide-reveal";
 const AboutMe = () => {
     return (
         <div
-            className="w-screen pl-10 pr-20 flex flex-col  items-center justify-center my-32 lg:px-40 "
+            className="w-screen pl-10 pr-20 flex flex-col  items-center justify-center my-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40  xl:pl-40 xl:pr-64 "
             id="sobre-mim"
         >
             <div className="flex w-full items-center">
-                <h2 className="text-5xl font-bold mr-10 text-nowrap leading-loose ">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mr-10 text-nowrap leading-loose ">
                     Sobre mim
-                    <span className="text-primary text-6xl">.</span>
+                    <span className="text-primary text-3xl md:text-4xl lg:text-5xl">
+                        .
+                    </span>
                 </h2>
-                <Separator className="bg-white opacity-50 hidden lg:block " />
+                <Separator className="bg-white opacity-50 " />
             </div>
 
             <div className="flex flex-col lg:flex-row mt-5 gap-10">
