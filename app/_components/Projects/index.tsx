@@ -9,6 +9,7 @@ import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
+import { SlideReveal } from "@/app/animation/slide-reveal";
 
 const Projects = () => {
     const [selectedId, setSelectedId] = useState("");
@@ -18,7 +19,7 @@ const Projects = () => {
     };
     return (
         <div
-            className="w-screen pr-20 flex flex-col items-center justify-center my-10 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40 xl:pl-40 xl:pr-64 "
+            className="w-screen pr-20 flex flex-col items-center justify-center py-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40 xl:pl-40 xl:pr-64 "
             id="projetos"
         >
             <div className="flex w-full items-center pl-10 pr-14 md:pl-0 md:pr-0">
@@ -35,18 +36,19 @@ const Projects = () => {
                 <motion.div className="flex flex-col items-center w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                         {LABELSPROJECTS.map((item) => (
-                            <CardProject
-                                id={item.id}
-                                key={item.id}
-                                title={item.title}
-                                image={item.image}
-                                technologies={item.technologies}
-                                description={item.description}
-                                alt={item.alt}
-                                gitUrl={item.gitUrl}
-                                deployURL={item.deployURL}
-                                onClick={() => handleClick(item.id)}
-                            />
+                            <SlideReveal key={item.id}>
+                                <CardProject
+                                    id={item.id}
+                                    title={item.title}
+                                    image={item.image}
+                                    technologies={item.technologies}
+                                    description={item.description}
+                                    alt={item.alt}
+                                    gitUrl={item.gitUrl}
+                                    deployURL={item.deployURL}
+                                    onClick={() => handleClick(item.id)}
+                                />
+                            </SlideReveal>
                         ))}
                     </div>
 
@@ -102,16 +104,20 @@ const Projects = () => {
                                                                 <motion.div className="flex items-center gap-2">
                                                                     {item.technologies.map(
                                                                         (
-                                                                            technologies
+                                                                            technology,
+                                                                            index
                                                                         ) => (
                                                                             <motion.h3
                                                                                 key={
-                                                                                    technologies
+                                                                                    index
                                                                                 }
                                                                                 className="text-primary font-semibold capitalize"
                                                                             >
+                                                                                {index >
+                                                                                    0 &&
+                                                                                    "-"}{" "}
                                                                                 {
-                                                                                    technologies
+                                                                                    technology
                                                                                 }
                                                                             </motion.h3>
                                                                         )
