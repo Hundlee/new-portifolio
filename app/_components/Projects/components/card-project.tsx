@@ -1,105 +1,108 @@
 "use client";
 
-import {
-    AnimatePresence,
-    motion,
-    useMotionTemplate,
-    useMotionValue,
-    useSpring,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
-
-interface CardProps {
-    id: string;
-    title: string;
-    image: string;
-    description: string;
-    tecnologics: string[];
-    onClick: () => void;
-}
+import { useRef, useState } from "react";
+import { Separator } from "../../ui/separator";
+import { FaGithub } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
+import { CardProps } from "../types";
 
 const CardProject = ({
     id,
     title,
     image,
     description,
-    tecnologics,
+    alt,
+    gitUrl,
+    deployURL,
+    technologies,
     onClick,
 }: CardProps) => {
-    const ROTATION_RANGE = 32.5;
-    const HALF_ROTATION_RANGE = 32.5 / 2;
+    const [isExpanded, setIsExpanded] = useState(false);
 
-    const ref = useRef(null);
+    const imageRef = useRef<HTMLDivElement>(null);
 
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const xSpring = useSpring(x);
-    const ySpring = useSpring(y);
-
-    const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
-
-    const handleMouseMove = (e) => {
-        if (!ref.current) return [0, 0];
-
-        const rect = ref.current.getBoundingClientRect();
-
-        const width = rect.width;
-        const height = rect.height;
-
-        const mouseX = (e.clientX - rect.left) * ROTATION_RANGE;
-        const mouseY = (e.clientY - rect.top) * ROTATION_RANGE;
-
-        const rX = (mouseY / height - HALF_ROTATION_RANGE) * -1;
-        const rY = mouseX / width - HALF_ROTATION_RANGE;
-
-        x.set(rX);
-        y.set(rY);
+    const handleMouseEnter = () => {
+        if (imageRef.current) {
+            imageRef.current.style.transform =
+                "scale(1.10) rotate(2deg) translateY(5px)";
+        }
     };
 
     const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
+        if (imageRef.current) {
+            imageRef.current.style.transform =
+                "scale(1) rotate(0deg) translateY(0px)";
+        }
     };
 
     return (
-        <div>
+        <div className="min-w-full">
             <motion.div
-                ref={ref}
-                onMouseMove={handleMouseMove}
+                className="relative min-w-full h-[10rem] sm:h-[16.5rem] md:h-[20rem] lg:h-[14rem] xl:h-[20rem] 2xl:h-[22rem] bg-[#313131] rounded-lg cursor-pointer overflow-hidden"
+                onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}
-                style={{
-                    transformStyle: "preserve-3d",
-                    transform,
-                }}
-                className="relative h-96 w-auto lg:h-60 xl:h-80 2xl:h-96 rounded-xl bg-gradient-to-br bg-primary to-violet-300 cursor-pointer"
             >
                 <div
+                    className=" w-[85%] h-[85%] absolute bottom-[-8%] left-[8%]  rounded-xl"
+                    ref={imageRef}
                     style={{
-                        transform: "translateZ(75px)",
-                        transformStyle: "preserve-3d",
+                        transition: "transform 0.3s ease",
                     }}
-                    className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg "
                 >
                     <Image
                         src={image}
-                        className="object-fill"
-                        alt={title}
+                        className="object-contain rounded-xl"
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ borderRadius: "inherit" }}
+                        alt={alt}
+                        style={{
+                            borderRadius: "inherit",
+                        }}
                     />
                 </div>
             </motion.div>
 
-            <div className="pt-5">
-                <motion.h2 className="text-xl font-bold mb-2 text-secondary-foreground">
-                    {title}
-                </motion.h2>
-                <motion.p className="text-secondary-foreground">
-                    {description}
+            <div className="min-w-full">
+                <div className="flex items-center gap-2 pt-5 min-w-full">
+                    <motion.h2 className="text-xl font-bold text-secondary-foreground text-nowrap">
+                        {title}
+                    </motion.h2>
+
+                    <Separator className="bg-white opacity-20" />
+                    <div className="p-0 flex items-center gap-2">
+                        <a href={gitUrl}>
+                            <button className="p-0">
+                                <FaGithub className="w-6 h-6 " />
+                            </button>
+                        </a>
+                        {deployURL && (
+                            <a href={deployURL}>
+                                <button className="p-0">
+                                    <MdLogout className="w-7 h-7" />
+                                </button>
+                            </a>
+                        )}
+                    </div>
+                </div>
+                <motion.p className="text-secondary-foreground min-w-full">
+                    {isExpanded
+                        ? description
+                        : description.length > 200
+                        ? `${description.slice(0, 200)}...`
+                        : description}
+                    {description.length > 200 && !isExpanded && (
+                        <button
+                            className="text-primary ml-2 font-bold transition-all delay-100 hover:ml-3"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                onClick();
+                            }}
+                        >
+                            Learn more &gt;
+                        </button>
+                    )}
                 </motion.p>
             </div>
         </div>
