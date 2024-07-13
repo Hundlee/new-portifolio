@@ -40,7 +40,7 @@ const CardProject = ({
     return (
         <div className="min-w-full">
             <motion.div
-                className="relative min-w-full h-[10rem] sm:h-[16.5rem] md:h-[20rem] lg:h-[14rem] xl:h-[20rem] 2xl:h-[22rem] bg-[#313131] rounded-lg cursor-pointer overflow-hidden"
+                className="relative min-w-full h-[8rem] sm:h-[16.5rem] md:h-[20rem] lg:h-[14rem] xl:h-[20rem] 2xl:h-[22rem] bg-[#313131] rounded-lg cursor-pointer overflow-hidden"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}
@@ -86,7 +86,19 @@ const CardProject = ({
                         )}
                     </div>
                 </div>
-                <motion.p className="text-secondary-foreground min-w-full">
+
+                <motion.div className="flex items-center gap-2">
+                    {technologies.map((technology, index) => (
+                        <motion.h3
+                            key={index}
+                            className="text-primary font-semibold capitalize"
+                        >
+                            {index > 0 && "-"} {technology}
+                        </motion.h3>
+                    ))}
+                </motion.div>
+
+                <motion.p className="text-secondary-foreground min-w-full pt-2 font-thin">
                     {isExpanded
                         ? description
                         : description.length > 200
