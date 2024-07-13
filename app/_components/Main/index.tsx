@@ -18,16 +18,18 @@ const Main = () => {
                 className="bg-background"
             >
                 <directionalLight />
-                {/* <OrbitControls maxDistance={20} minDistance={10} /> */}
+                <OrbitControls maxDistance={20} minDistance={10} />
                 <pointLight position={[-30, 0, -30]} power={20.0} />
                 <PointCircle />
             </Canvas>
 
             <div className="absolute top-[50%] left-[40%] -translate-x-[50%] -translate-y-[50%]">
                 <div className="animate-slideintop1s gap-3 flex flex-col">
-                    <h1 className="text-white font-bold text-6xl pointer-events-none select-none">
+                    <h1 className="text-white font-bold text-3xl md:text-6xl pointer-events-none select-none">
                         Olá, Meu nome é Gabriel Mesquita
-                        <span className="text-primary text-7xl">.</span>
+                        <span className="text-primary text-3xl md:text-7xl">
+                            .
+                        </span>
                     </h1>
 
                     <DynamicText />

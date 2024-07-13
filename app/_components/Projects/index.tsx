@@ -19,7 +19,7 @@ const Projects = () => {
     };
     return (
         <div
-            className="w-screen pr-20 flex flex-col items-center justify-center py-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40 xl:pl-40 xl:pr-64 "
+            className="w-screen pr-16 flex flex-col items-center justify-center py-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40 xl:pl-40 xl:pr-64 "
             id="projetos"
         >
             <div className="flex w-full items-center pl-10 pr-14 md:pl-0 md:pr-0">
@@ -32,7 +32,7 @@ const Projects = () => {
                 </h2>
             </div>
 
-            <div className="pt-10 pl-10 pr-14 md:pl-0 md:pr-0 w-full">
+            <div className="pt-10 pl-10 pr-12 md:pl-0 md:pr-0 w-full">
                 <motion.div className="flex flex-col items-center w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                         {LABELSPROJECTS.map((item) => (

@@ -46,7 +46,7 @@ const DynamicText = () => {
     }, [displayedText, isDeleting, typingSpeed]);
 
     return (
-        <h3 className="font-thin text-4xl pointer-events-none select-none">
+        <h3 className="font-thin text-2xl md:text-4xl pointer-events-none select-none">
             Sou um{" "}
             <span className="text-primary font-bold">{displayedText}</span>
             <span id="cursor">|</span>
