@@ -164,21 +164,23 @@ const Projects = () => {
                                                                                 </motion.p>
                                                                             </motion.a>
                                                                         </motion.button>
-                                                                        <motion.div>
-                                                                            <motion.a
-                                                                                href={
-                                                                                    item.deployURL
-                                                                                }
-                                                                                target="_blank"
-                                                                            >
-                                                                                <motion.button className="p-0 flex items-center gap-2 text-primary">
-                                                                                    <MdLogout className="w-5 h-5" />
-                                                                                    <motion.p className="font-semibold">
-                                                                                        deploy
-                                                                                    </motion.p>
-                                                                                </motion.button>
-                                                                            </motion.a>
-                                                                        </motion.div>
+                                                                        {item.deployURL && (
+                                                                            <motion.div>
+                                                                                <motion.a
+                                                                                    href={
+                                                                                        item.deployURL
+                                                                                    }
+                                                                                    target="_blank"
+                                                                                >
+                                                                                    <motion.button className="p-0 flex items-center gap-2 text-primary">
+                                                                                        <MdLogout className="w-5 h-5" />
+                                                                                        <motion.p className="font-semibold">
+                                                                                            deploy
+                                                                                        </motion.p>
+                                                                                    </motion.button>
+                                                                                </motion.a>
+                                                                            </motion.div>
+                                                                        )}
                                                                     </motion.div>
                                                                 </motion.div>
                                                             </motion.div>
