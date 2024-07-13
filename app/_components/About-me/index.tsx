@@ -11,7 +11,7 @@ import { GitHubIcon, LinkedinIcon, WhatsAppIcon } from "../Social-Icons";
 const AboutMe = () => {
     return (
         <div
-            className="w-screen pl-10 pr-20 flex flex-col  items-center justify-center my-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40  xl:pl-40 xl:pr-64 "
+            className="w-screen pl-10 pr-28 flex flex-col  items-center justify-center my-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40  xl:pl-40 xl:pr-64 "
             id="sobre-mim"
         >
             <div className="flex w-full items-center">

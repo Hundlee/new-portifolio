@@ -24,9 +24,7 @@ const Header = () => {
 
     return (
         <div
-            className={`flex justify-between items-center fixed top-0 left-0 w-screen z-10 text-red-800 py-5 pl-8 pr-36 ${
-                isScrolled ? "backdrop-blur-sm" : ""
-            }`}
+            className={`flex justify-between items-center fixed top-0 left-0 w-screen z-10 text-red-800 py-5 pl-8 pr-36 backdrop-blur-md`}
         >
             <a
                 href="https://docs.google.com/document/d/e/2PACX-1vQ__pn4QIvPQ3niaqKS7bJRChkJbsoaGHQAQDQQHvJwAVNG3B04mYNm30_J4K1NkV3AJtngcM50SBjj/pub"
