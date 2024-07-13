@@ -8,10 +8,7 @@ interface RevealProps {
     width?: "fit-content" | "100%";
 }
 
-export const SlideReveal = ({
-    children,
-    width = "fit-content",
-}: RevealProps) => {
+export const SlideReveal = ({ children }: RevealProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref);
 
@@ -31,7 +28,7 @@ export const SlideReveal = ({
     return (
         <div
             ref={ref}
-            style={{ position: "relative", width, overflow: "hidden" }}
+            style={{ position: "relative", width: "100%", overflow: "hidden" }}
         >
             <motion.div
                 variants={{
