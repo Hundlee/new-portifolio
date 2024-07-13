@@ -5,6 +5,7 @@ import NavBar from "./_components/NavBar";
 import AboutMe from "./_components/About-me";
 import Header from "./_components/Header";
 import Projects from "./_components/Projects";
+import Contato from "./_components/Contato";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <Main />
             <AboutMe />
             <Projects />
+            <Contato />
         </div>
     );
 }
