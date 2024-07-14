@@ -21,7 +21,7 @@ const Header = () => {
                     <LinkedinIcon url="https://www.linkedin.com/in/gabriel-mesquita-9614782b4/" />
                 </div>
                 <div className="animate-slideicontop3">
-                    <WhatsAppIcon url="https://github.com/Hundlee" />
+                    <WhatsAppIcon url="https://api.whatsapp.com/send/?phone=5585994038930&text=Tenho+interesse+em+seus+servi%C3%A7oes&type=phone_number&app_absent=0" />
                 </div>
             </div>
         </div>

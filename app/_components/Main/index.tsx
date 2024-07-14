@@ -36,7 +36,7 @@ const Main = () => {
 
                     <MainDescription />
 
-                    <a href="#contact">
+                    <a href="#contato">
                         <Button className="p-5 bg-primary w-fit rounded-sm">
                             Contato
                         </Button>
