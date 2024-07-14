@@ -21,11 +21,19 @@ const Contato = () => {
                         <p className="text-center font-thin text-lg sm:text-xl">
                             Envie-me um e-mail se quiser me contratar! Você
                             também pode me encontrar no{" "}
-                            <a href="" className="text-primary font-semibold">
+                            <a
+                                href="https://www.linkedin.com/in/gabriel-mesquita-9614782b4/"
+                                className="text-primary font-semibold"
+                                target="_blank"
+                            >
                                 Linkedin
                             </a>{" "}
                             ou no{" "}
-                            <a href="#" className="text-primary font-semibold">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=5585994038930&text=Tenho+interesse+em+seus+servi%C3%A7oes&type=phone_number&app_absent=0"
+                                className="text-primary font-semibold"
+                                target="_blank"
+                            >
                                 Whatsapp
                             </a>
                             , se essa for a sua preferência.
