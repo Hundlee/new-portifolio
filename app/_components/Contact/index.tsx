@@ -42,12 +42,15 @@ const Contato = () => {
                 </SlideReveal>
                 <div>
                     <SlideReveal>
-                        <div className="flex items-center gap-2 hover:text-primary cursor-pointer">
+                        <a
+                            href="mailto:mesquitag884@gmail.com"
+                            className="flex items-center gap-2 hover:text-primary cursor-pointer"
+                        >
                             <MdOutlineEmail className="w-6 h-6" />
                             <h3 className="text-base sm:text-xl">
                                 mesquitag884@gmail.com
                             </h3>
-                        </div>
+                        </a>
                     </SlideReveal>
                 </div>
             </div>
