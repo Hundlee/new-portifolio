@@ -3,12 +3,7 @@ import { FC, useRef } from "react";
 import * as THREE from "three";
 import { pointsInner, pointsOuter } from "../utils/points";
 import { Point } from "./point";
-
-interface PointData {
-    idx: number;
-    position: [number, number, number];
-    color: string;
-}
+import { PointData } from "../types";
 
 export const PointCircle: FC = () => {
     const ref = useRef<THREE.Group>(null);

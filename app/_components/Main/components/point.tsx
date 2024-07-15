@@ -1,10 +1,6 @@
 import { Sphere } from "@react-three/drei";
 import { FC } from "react";
-
-interface PointProps {
-    position: [number, number, number];
-    color: string;
-}
+import { PointProps } from "../types";
 
 export const Point: FC<PointProps> = ({ position, color }) => {
     return (

@@ -1,3 +1,5 @@
+import { PointData } from "../types";
+
 const MIN_RADIUS = 7.5;
 const MAX_RADIUS = 15;
 const DEPTH = 2;
@@ -36,12 +38,6 @@ const calculateColor = (x: number): string => {
 const randomFromInterval = (min: number, max: number): number => {
     return Math.random() * (max - min) + min;
 };
-
-interface PointData {
-    idx: number;
-    position: [number, number, number];
-    color: string;
-}
 
 export const pointsInner: PointData[] = Array.from(
     { length: NUM_POINTS },
