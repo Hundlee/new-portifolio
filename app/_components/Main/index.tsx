@@ -3,7 +3,6 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import { PointCircle } from "./components/point-circle";
-import MainDescription from "./components/main-description";
 import { Button } from "../ui/button";
 import { OrbitControls } from "@react-three/drei";
 import DynamicText from "./components/dynamic-Text";
@@ -34,7 +33,15 @@ const Main = () => {
 
                     <DynamicText />
 
-                    <MainDescription />
+                    <h2 className="font-thin text-foreground text-xl select-none">
+                        <span>
+                            Sou desenvolvedor full-stack com mais de 2 anos de
+                            experiência. Amo o que faço e me esforço
+                            continuamente para crescer no mundo da programação.
+                            Dedico-me a criar e aprimorar códigos, sempre
+                            buscando a excelência em cada projeto.
+                        </span>
+                    </h2>
 
                     <a href="#contato">
                         <Button className="p-5 bg-primary w-fit rounded-sm">
