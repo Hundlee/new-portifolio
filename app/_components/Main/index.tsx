@@ -35,11 +35,10 @@ const Main = () => {
 
                     <h2 className="font-thin text-foreground text-xl select-none">
                         <span>
-                            Sou desenvolvedor full-stack com mais de 2 anos de
-                            experiência. Amo o que faço e me esforço
-                            continuamente para crescer no mundo da programação.
-                            Dedico-me a criar e aprimorar códigos, sempre
-                            buscando a excelência em cada projeto.
+                            Sou desenvolvedor full-stack. Amo o que faço e me
+                            esforço continuamente para crescer no mundo da
+                            tecnologia. Dedico-me a criar e aprimorar códigos,
+                            sempre buscando a excelência em cada projeto.
                         </span>
                     </h2>
 
