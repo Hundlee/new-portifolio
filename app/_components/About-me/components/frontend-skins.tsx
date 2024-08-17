@@ -5,9 +5,9 @@ const FrontEndSkills = () => {
     const frontEndSkills = [
         "Javascript",
         "Typescript",
+        "ReactJs",
         "NextJs",
         "TailwindCss",
-        "ReactJs",
         "HTML5",
         "CSS",
         "SASS",

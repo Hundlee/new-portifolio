@@ -6,11 +6,13 @@ const BackendSkills = () => {
         "Javascript",
         "Typescript",
         "NodeJs",
-        "MongoDb",
         "Prisma",
         "Fastify",
         "ExpressJs",
         "Firebase",
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
         "GrammY",
     ];
 
