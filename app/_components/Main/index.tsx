@@ -17,7 +17,6 @@ const Main = () => {
                 className="bg-background"
             >
                 <directionalLight />
-                <OrbitControls maxDistance={20} minDistance={10} />
                 <pointLight position={[-30, 0, -30]} power={20.0} />
                 <PointCircle />
             </Canvas>

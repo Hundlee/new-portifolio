@@ -19,9 +19,6 @@ export const SlideReveal = ({ children }: RevealProps) => {
         if (isInView) {
             mainControls.start("visible");
             slideControls.start("visible");
-        } else {
-            mainControls.start("hidden");
-            slideControls.start("hidden");
         }
     }, [isInView, mainControls, slideControls]);
 
