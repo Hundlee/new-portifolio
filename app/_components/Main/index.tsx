@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import { PointCircle } from "./components/point-circle";
 import { Button } from "../ui/button";
-import { OrbitControls } from "@react-three/drei";
 import DynamicText from "./components/dynamic-Text";
 
 const Main = () => {
