@@ -33,7 +33,7 @@ const Projects = () => {
             </div>
 
             <div className="pt-10 pl-10 pr-12 md:pl-0 md:pr-0 w-full">
-                <motion.div className="flex flex-col items-center w-full">
+                <div className="flex flex-col items-center w-full">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
                         {LABELSPROJECTS.map((item) => (
                             <SlideReveal key={item.id}>
@@ -74,34 +74,34 @@ const Projects = () => {
                                                 animate={{ opacity: 1 }}
                                                 exit={{ opacity: 0 }}
                                             >
-                                                <motion.button
+                                                <button
                                                     className="absolute top-4 right-4 p-2 text-center text-red-700 border border-red-700 rounded-full"
                                                     onClick={() =>
                                                         setSelectedId("")
                                                     }
                                                 >
                                                     <IoMdClose />
-                                                </motion.button>
-                                                <motion.div className="w-full h-full flex flex-col items-center justify-center">
-                                                    <motion.div className="relative w-[70%] h-[70%]">
+                                                </button>
+                                                <div className="w-full h-full flex flex-col items-center justify-center">
+                                                    <div className="relative w-[70%] h-[70%]">
                                                         <Image
                                                             src={item.image}
                                                             fill
                                                             alt={item.alt}
                                                             className="object-cover rounded-t-lg"
                                                         />
-                                                    </motion.div>
+                                                    </div>
                                                     <motion.div
                                                         className="bg-secondary rounded-b-lg p-4 w-[70%] "
                                                         layoutId={`card-container-${item.id}`}
                                                     >
-                                                        <motion.div>
-                                                            <motion.div>
-                                                                <motion.h2 className="text-3xl font-bold mb-3 text-secondary-foreground">
+                                                        <div>
+                                                            <div>
+                                                                <h2 className="text-3xl font-bold mb-3 text-secondary-foreground">
                                                                     {item.title}
-                                                                </motion.h2>
+                                                                </h2>
 
-                                                                <motion.div className="flex items-center gap-2">
+                                                                <div className="flex items-center gap-2">
                                                                     {item.technologies.map(
                                                                         (
                                                                             technology,
@@ -122,13 +122,13 @@ const Projects = () => {
                                                                             </motion.h3>
                                                                         )
                                                                     )}
-                                                                </motion.div>
+                                                                </div>
 
-                                                                <motion.p className="text-md text-secondary-foreground mb-4 pt-3">
+                                                                <p className="text-md text-secondary-foreground mb-4 pt-3">
                                                                     {
                                                                         item.description
                                                                     }
-                                                                </motion.p>
+                                                                </p>
                                                                 <motion.div>
                                                                     <motion.h3
                                                                         className="text-2xl font-bold text-secondary-foreground"
@@ -144,13 +144,13 @@ const Projects = () => {
                                                                     >
                                                                         Project
                                                                         Links
-                                                                        <motion.span className="text-3xl text-primary">
+                                                                        <span className="text-3xl text-primary">
                                                                             .
-                                                                        </motion.span>
+                                                                        </span>
                                                                     </motion.h3>
-                                                                    <motion.div className="pt-3 flex items-center gap-2">
-                                                                        <motion.button>
-                                                                            <motion.a
+                                                                    <div className="pt-3 flex items-center gap-2">
+                                                                        <button>
+                                                                            <a
                                                                                 className="flex items-center gap-2 text-primary"
                                                                                 href={
                                                                                     item.gitUrl
@@ -158,42 +158,42 @@ const Projects = () => {
                                                                                 target="_blank"
                                                                             >
                                                                                 <FaGithub className="w-5 h-5" />
-                                                                                <motion.p className="font-semibold">
+                                                                                <p className="font-semibold">
                                                                                     Codigo
                                                                                     fonte
-                                                                                </motion.p>
-                                                                            </motion.a>
-                                                                        </motion.button>
+                                                                                </p>
+                                                                            </a>
+                                                                        </button>
                                                                         {item.deployURL && (
-                                                                            <motion.div>
-                                                                                <motion.a
+                                                                            <div>
+                                                                                <a
                                                                                     href={
                                                                                         item.deployURL
                                                                                     }
                                                                                     target="_blank"
                                                                                 >
-                                                                                    <motion.button className="p-0 flex items-center gap-2 text-primary">
+                                                                                    <button className="p-0 flex items-center gap-2 text-primary">
                                                                                         <MdLogout className="w-5 h-5" />
-                                                                                        <motion.p className="font-semibold">
+                                                                                        <p className="font-semibold">
                                                                                             deploy
-                                                                                        </motion.p>
-                                                                                    </motion.button>
-                                                                                </motion.a>
-                                                                            </motion.div>
+                                                                                        </p>
+                                                                                    </button>
+                                                                                </a>
+                                                                            </div>
                                                                         )}
-                                                                    </motion.div>
+                                                                    </div>
                                                                 </motion.div>
-                                                            </motion.div>
-                                                        </motion.div>
+                                                            </div>
+                                                        </div>
                                                     </motion.div>
-                                                </motion.div>
+                                                </div>
                                             </motion.div>
                                         )
                                 )}
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
