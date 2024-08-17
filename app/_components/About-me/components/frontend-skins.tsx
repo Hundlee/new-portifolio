@@ -1,7 +1,8 @@
 import { FiTool } from "react-icons/fi";
+import SkillIcon from "./skill-icon";
 
 const FrontEndSkills = () => {
-    const frontEndSkillsList = [
+    const frontEndSkills = [
         "Javascript",
         "Typescript",
         "NextJs",
@@ -19,10 +20,8 @@ const FrontEndSkills = () => {
                 <h3 className="font-bold text-xl">no Frontend</h3>
             </div>
             <div className="flex flex-wrap gap-2 mt-5">
-                {frontEndSkillsList.map((item, index) => (
-                    <div key={index} className="p-2 rounded-2xl bg-zinc-800">
-                        <h3 className="text-white">{item}</h3>
-                    </div>
+                {frontEndSkills.map((skill, index) => (
+                    <SkillIcon name={skill} key={index} />
                 ))}
             </div>
         </div>

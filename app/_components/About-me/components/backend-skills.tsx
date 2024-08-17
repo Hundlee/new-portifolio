@@ -1,7 +1,8 @@
 import { GrTools } from "react-icons/gr";
+import SkillIcon from "./skill-icon";
 
 const BackendSkills = () => {
-    const backendSkillsList = [
+    const backendSkills = [
         "Javascript",
         "Typescript",
         "NodeJs",
@@ -20,10 +21,8 @@ const BackendSkills = () => {
                 <h3 className="font-bold text-xl">no Backend</h3>
             </div>
             <div className="flex flex-wrap gap-2 mt-5">
-                {backendSkillsList.map((item, index) => (
-                    <div key={index} className="p-2 rounded-2xl bg-zinc-800">
-                        <h3 className="text-white">{item}</h3>
-                    </div>
+                {backendSkills.map((skill, index) => (
+                    <SkillIcon name={skill} key={index} />
                 ))}
             </div>
         </div>
