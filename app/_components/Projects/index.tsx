@@ -83,7 +83,7 @@ const Projects = () => {
                                                     <IoMdClose />
                                                 </button>
                                                 <div className="w-full h-full flex flex-col items-center justify-center">
-                                                    <div className="relative w-[70%] h-[20%] sm:h-[40%] lg:h-[50%] 2xl:h-[60%] 3xl:h-[65%]">
+                                                    <div className="relative w-[80%] h-[20%] sm:h-[40%] lg:h-[50%] 2xl:h-[60%] 3xl:h-[65%]">
                                                         <Image
                                                             src={item.image}
                                                             fill
@@ -92,7 +92,7 @@ const Projects = () => {
                                                         />
                                                     </div>
                                                     <motion.div
-                                                        className="bg-secondary rounded-b-lg p-4 w-[70%] "
+                                                        className="bg-secondary rounded-b-lg p-4 w-[80%] "
                                                         layoutId={`card-container-${item.id}`}
                                                     >
                                                         <div>

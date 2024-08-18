@@ -64,40 +64,45 @@ const CardProject = ({
             </div>
 
             <div className="min-w-full">
-                <div className="flex items-center gap-2 pt-5 min-w-full">
+                <div className="flex items-center gap-2 pt-5 min-w-full flex-wrap">
                     <h2 className="text-xl font-bold text-secondary-foreground text-nowrap">
                         {title}
                     </h2>
 
                     <Separator className="bg-white opacity-20" />
                     <div className="p-0 flex items-center gap-2">
-                        <a href={gitUrl}>
-                            <button className="p-0 hover:text-primary">
-                                <FaGithub className="w-6 h-6 " />
-                            </button>
+                        <a
+                            href={gitUrl}
+                            target="_blank"
+                            className="p-0 hover:text-primary flex items-center gap-2"
+                        >
+                            <FaGithub className="w-4 h-4 sm:w-6 sm:h-6" /> code
                         </a>
                         {deployURL && (
-                            <a href={deployURL}>
-                                <button className="p-0 hover:text-primary">
-                                    <MdLogout className="w-7 h-7" />
-                                </button>
+                            <a
+                                href={deployURL}
+                                target="_blank"
+                                className="hover:text-primary flex items-center gap-2"
+                            >
+                                <MdLogout className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
+                                deploy
                             </a>
                         )}
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 flex-wrap">
+                <div className="flex items-center gap-2 flex-wrap mt-2">
                     {technologies.map((technology, index) => (
                         <h3
                             key={index}
-                            className="text-primary font-semibold capitalize"
+                            className="text-xs sm:text-lg text-primary font-semibold capitalize"
                         >
                             {index > 0 && "-"} {technology}
                         </h3>
                     ))}
                 </div>
 
-                <p className="text-secondary-foreground min-w-full pt-2 font-thin">
+                <p className="text-sm sm:text-lg text-secondary-foreground min-w-full pt-2 font-thin">
                     {isExpanded
                         ? description
                         : description.length > 200
