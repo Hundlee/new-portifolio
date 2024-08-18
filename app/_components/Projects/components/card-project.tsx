@@ -76,7 +76,7 @@ const CardProject = ({
                             target="_blank"
                             className="p-0 hover:text-primary flex items-center gap-2"
                         >
-                            <FaGithub className="w-4 h-4 sm:w-6 sm:h-6" /> code
+                            <FaGithub className="w-4 h-4 sm:w-6 sm:h-6" /> Code
                         </a>
                         {deployURL && (
                             <a
@@ -85,7 +85,7 @@ const CardProject = ({
                                 className="hover:text-primary flex items-center gap-2"
                             >
                                 <MdLogout className="w-5 h-5 sm:w-7 sm:h-7" />{" "}
-                                deploy
+                                Deploy
                             </a>
                         )}
                     </div>
