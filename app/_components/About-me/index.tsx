@@ -25,7 +25,7 @@ const AboutMe = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row mt-5 gap-10">
-                <div className="font-thin text-xl flex flex-col gap-3">
+                <div className="font-thin text-lg sm:text-xl flex flex-col gap-3">
                     <SlideReveal>
                         <p>
                             Minha experiência abrange desde a criação de
@@ -68,7 +68,7 @@ const AboutMe = () => {
                     </SlideReveal>
                     <SlideReveal>
                         <div className="flex items-center gap-4">
-                            <h2 className="text-primary font-semibold flex items-center gap-2">
+                            <h2 className="text-sm sm:text-lg text-primary font-semibold flex items-center gap-2">
                                 Meus Links <FaArrowRight />
                             </h2>
                             <div className="flex gap-5">

@@ -39,7 +39,7 @@ const CardProject = ({
     return (
         <div className="min-w-full">
             <div
-                className="relative min-w-full h-[8.5rem] sm:h-[16.5rem] md:h-[22rem] lg:h-[14rem] xl:h-[20rem] 2xl:h-[22rem] bg-[#313131] rounded-lg cursor-pointer overflow-hidden"
+                className="relative min-w-full h-[8.5rem] xs:h-[12rem] sm:h-[16.5rem] md:h-[22rem] lg:h-[14rem] xl:h-[20rem] 2xl:h-[22rem] bg-[#313131] rounded-lg cursor-pointer overflow-hidden"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={onClick}
