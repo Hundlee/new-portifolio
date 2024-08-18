@@ -22,9 +22,9 @@ const Projects = () => {
             className="w-screen pr-16 flex flex-col items-center justify-center py-32 md:pl-[5rem] md:pr-[10rem] lg:pl-28 lg:pr-40 xl:pl-40 xl:pr-64 "
             id="projetos"
         >
-            <div className="flex w-full items-center pl-10 pr-14 md:pl-0 md:pr-0">
+            <div className="flex w-full items-center pl-10 pr-12 md:pl-0 md:pr-0">
                 <Separator className="bg-white opacity-50" />
-                <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold ml-10 text-nowrap leading-loose  p-0">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold ml-10 text-nowrap leading-loose p-0">
                     Projetos
                     <span className="text-primary text-3xl md:text-4xl lg:text-5xl">
                         .
@@ -83,12 +83,12 @@ const Projects = () => {
                                                     <IoMdClose />
                                                 </button>
                                                 <div className="w-full h-full flex flex-col items-center justify-center">
-                                                    <div className="relative w-[70%] h-[70%]">
+                                                    <div className="relative w-[70%] h-[20%] sm:h-[40%] lg:h-[50%] 2xl:h-[60%] 3xl:h-[65%]">
                                                         <Image
                                                             src={item.image}
                                                             fill
                                                             alt={item.alt}
-                                                            className="object-cover rounded-t-lg"
+                                                            className="object-fill rounded-t-lg"
                                                         />
                                                     </div>
                                                     <motion.div
@@ -97,11 +97,11 @@ const Projects = () => {
                                                     >
                                                         <div>
                                                             <div>
-                                                                <h2 className="text-3xl font-bold mb-3 text-secondary-foreground">
+                                                                <h2 className="text-xl md:text-3xl font-bold mb-3 text-secondary-foreground">
                                                                     {item.title}
                                                                 </h2>
 
-                                                                <div className="flex items-center gap-2">
+                                                                <div className="flex items-center gap-2 flex-wrap">
                                                                     {item.technologies.map(
                                                                         (
                                                                             technology,
@@ -111,7 +111,7 @@ const Projects = () => {
                                                                                 key={
                                                                                     index
                                                                                 }
-                                                                                className="text-primary font-semibold capitalize"
+                                                                                className="text-xs md:text-lg text-primary font-semibold capitalize"
                                                                             >
                                                                                 {index >
                                                                                     0 &&
@@ -124,14 +124,14 @@ const Projects = () => {
                                                                     )}
                                                                 </div>
 
-                                                                <p className="text-md text-secondary-foreground mb-4 pt-3">
+                                                                <p className="text-sm text-secondary-foreground mb-4 pt-3">
                                                                     {
                                                                         item.description
                                                                     }
                                                                 </p>
                                                                 <motion.div>
                                                                     <motion.h3
-                                                                        className="text-2xl font-bold text-secondary-foreground"
+                                                                        className="text-xl sm:text-2xl font-bold text-secondary-foreground"
                                                                         initial={{
                                                                             opacity: 0,
                                                                         }}
@@ -158,7 +158,7 @@ const Projects = () => {
                                                                                 target="_blank"
                                                                             >
                                                                                 <FaGithub className="w-5 h-5" />
-                                                                                <p className="font-semibold">
+                                                                                <p className="text-xs sm:text-lg font-semibold">
                                                                                     Codigo
                                                                                     fonte
                                                                                 </p>
@@ -174,7 +174,7 @@ const Projects = () => {
                                                                                 >
                                                                                     <button className="p-0 flex items-center gap-2 text-primary">
                                                                                         <MdLogout className="w-5 h-5" />
-                                                                                        <p className="font-semibold">
+                                                                                        <p className="text-xs sm:text-lg font-semibold">
                                                                                             deploy
                                                                                         </p>
                                                                                     </button>
