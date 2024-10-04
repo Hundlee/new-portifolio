@@ -31,7 +31,7 @@ const Main = () => {
 
                     <DynamicText />
 
-                    <h2 className="font-thin text-foreground text-xl select-none">
+                    <h2 className="font-extralight text-foreground text-xl select-none">
                         <span>
                             Sou desenvolvedor full-stack. Amo o que faço e me
                             esforço continuamente para crescer no mundo da
